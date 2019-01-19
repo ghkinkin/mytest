@@ -3,8 +3,6 @@ echo '# Running apt-get update ...'
 apt-get update
 echo '# Installing imagemagick ...'
 apt-get install -y imagemagick
-echo '# Installing blender ...'
-apt-get install -y blender
 echo '# Installing python-pip ...'
 apt-get install -y python-pip
 echo '# Installing azure-batch ...'
@@ -20,7 +18,14 @@ echo '# Installing install dotnet-sdk-2.1 ...'
 sudo apt-get -y install dotnet-sdk-2.1
 wget -O azcopy.tar.gz https://aka.ms/downloadazcopyprlinux
 tar -xf azcopy.tar.gz
-blender --version
+
 ./install.sh
+
+echo '# Installing blender ...'
+sudo add-apt-repository -y ppa:thomas-schiex/blender
+sudo apt-get update
+apt-get install -y blender
+blender --version
+
 echo "## DONE ##"
 exit $?
