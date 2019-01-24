@@ -24,6 +24,8 @@ tar -xf azcopy.tar.gz
 ./install.sh
 blender --version
 
+pwd
+
 ls -l
 
 echo "## DONE ##"
