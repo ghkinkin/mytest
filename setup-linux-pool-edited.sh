@@ -23,5 +23,8 @@ wget -O azcopy.tar.gz https://aka.ms/downloadazcopyprlinux
 tar -xf azcopy.tar.gz
 ./install.sh
 blender --version
+
+ls -l
+
 echo "## DONE ##"
 exit $?
