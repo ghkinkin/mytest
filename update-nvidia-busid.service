@@ -1,0 +1,21 @@
+# Update Nvidia BUSID before X starts 
+#  /usr/share/X11/xorg.conf.d/xorg.conf
+#
+#
+
+[Unit]
+Description=Update Nvidia BUSID in  /usr/share/X11/xorg.conf.d/xorg.conf before X starts
+DefaultDependencies=yes
+After=syslog.target   
+Before=display-manager.service multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update-nvidia-busid.sh
+RemainAfterExit=true
+StandardOutput=journal+console
+StandardError=journal+console
+SyslogIdentifier=update-nvidia-bus-id
+
+[Install]
+WantedBy=multi-user.target
