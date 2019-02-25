@@ -19,6 +19,8 @@ echo '# Running apt-get update ...'
 sudo apt-get update
 echo '# Installing install dotnet-sdk-2.2 ...'
 sudo apt-get -y install dotnet-sdk-2.2
+echo '# Installing install UNZIP'
+sudo apt-get -y install unzip
 wget -O azcopy.tar.gz https://aka.ms/downloadazcopyprlinux
 tar -xf azcopy.tar.gz
 ./install.sh
